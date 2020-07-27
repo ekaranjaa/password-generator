@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: "Fira Code", monospace;
+  min-height: 100vh;
+  background: #111d4a;
+}
+
+.header,
+.footer {
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+}
+
+.header a,
+.footer a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.header a:hover, .header a:focus,
+.footer a:hover,
+.footer a:focus {
+  text-decoration: underline;
+}
+
+.container {
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  background: #2ec4b6;
+}
+
+.password {
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  color: #b5f44a;
+  background: #111d4a;
+}
+
+.form .form-group {
+  margin: 10px 0;
+}
+
+.form .btn {
+  margin: 20px auto 0;
+  padding: 10px 20px;
+  display: block;
+  border: none;
+  color: white;
+  font-family: "Fira Code", monospace;
+  background: #d62246;
+  border-radius: 10px;
+}
+
+.form .btn:hover, .form .btn:focus {
+  background: #aa1b38;
+}
+
+.form .btn,
+.form .label {
+  cursor: pointer;
+}

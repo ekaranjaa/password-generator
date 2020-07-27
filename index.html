@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password generator</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        Password generator
+    </header>
+    <div class="container">
+        <div id="password" class="password">Password</div>
+        <form class="form">
+            <div class="form-group">
+                <label for="passLengthNumber" class="label">Password length</label>
+                <input type="range" id="passLengthSlider" value="10" min="8" max="50">
+                <input type="number" id="passLengthNumber" value="10" min="8" max="50">
+            </div>
+            <div class="form-group">
+                <label for="includeUppercase" class="label">Include uppercase</label>
+                <input type="checkbox" id="includeUppercase">
+            </div>
+            <div class="form-group">
+                <label for="includeNumbers" class="label">Include numbers</label>
+                <input type="checkbox" id="includeNumbers">
+            </div>
+            <div class="form-group">
+                <label for="includeSpecialChars" class="label">Include special charachters</label>
+                <input type="checkbox" id="includeSpecialChars">
+            </div>
+
+            <button type="submit" class="btn">Generate password</button>
+        </form>
+    </div>
+    <footer class="footer">
+        <a href="https://twitter.com/ekaranjaa" target="_blank">Twitter</a>
+        &#124;
+        <a href="https://github.com/ekaranjaa/pass-gen" target="_blank">GitHub</a>
+    </footer>
+
+    <script src="./js/app.js"></script>
+</body>
+
+</html>
