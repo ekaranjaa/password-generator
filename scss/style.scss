@@ -1,5 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code&display=swap");
 
+$white: #fff;
+$blue: #111d4a;
+$light-blue: #2ec4b6;
+$green: #b5f44a;
+$maroon: #d62246;
+$border-radius: 5px;
+
 * {
   margin: 0;
   padding: 0;
@@ -13,7 +20,15 @@ body {
   flex-direction: column;
   font-family: "Fira Code", monospace;
   min-height: 100vh;
-  background: #111d4a;
+  background: $blue;
+}
+
+.header {
+  margin-bottom: auto;
+}
+
+.footer {
+  margin-top: auto;
 }
 
 .header,
@@ -21,12 +36,12 @@ body {
   padding: 10px;
   width: 100%;
   text-align: center;
-  color: #fff;
-  //   background: rgba(0, 0, 0, 0.3);
+  color: $white;
+  background: rgba(0, 0, 0, 0.3);
 
   a {
     text-decoration: none;
-    color: #fff;
+    color: $white;
 
     &:hover,
     &:focus {
@@ -36,19 +51,52 @@ body {
 }
 
 .container {
-  margin: 20px auto;
+  margin: 20px;
   padding: 20px;
-  border-radius: 10px;
-  background: #2ec4b6;
+  border-radius: $border-radius;
+  background: $light-blue;
+  box-shadow: 3px 3px 0 darken($light-blue, 10%);
 }
 
 .password {
   margin-bottom: 20px;
   padding: 10px;
-  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: $border-radius;
   text-align: center;
-  color: #b5f44a;
-  background: #111d4a;
+  color: $green;
+  background: $blue;
+  box-shadow: 3px 3px 0 darken($blue, 10%);
+
+  &-holder {
+    margin: auto;
+    display: block;
+    text-align: center;
+    font-size: 1rem;
+    font-family: "Fira Code", monospace;
+    border: none;
+    background: none;
+    color: $green;
+    outline: none;
+  }
+
+  .copy {
+    padding: 5px;
+    display: block;
+    border: none;
+    border-radius: 2px;
+    color: $blue;
+    background: $green;
+    transition: 0.1s ease-out;
+    outline: none;
+    cursor: pointer;
+
+    &:active {
+      transform: scale(0.9);
+    }
+  }
 }
 
 .form {
@@ -56,19 +104,36 @@ body {
     margin: 10px 0;
   }
 
+  .input,
+  .btn {
+    font-family: "Fira Code", monospace;
+  }
+
+  .input {
+    padding: 2px;
+    border: none;
+    border-radius: 2px;
+  }
+
   .btn {
     margin: 20px auto 0;
     padding: 10px 20px;
     display: block;
     border: none;
-    color: white;
-    font-family: "Fira Code", monospace;
-    background: #d62246;
-    border-radius: 10px;
+    color: $white;
+    background: $maroon;
+    border-radius: $border-radius;
+    box-shadow: 3px 3px 0 darken($maroon, 10%);
+    transition: 0.1s ease-in-out;
+    outline: none;
 
     &:hover,
     &:focus {
-      background: darken(#d62246, 10%);
+      background: darken($maroon, 5%);
+    }
+
+    &:active {
+      box-shadow: 0 0 0 darken($maroon, 10%);
     }
   }
 
